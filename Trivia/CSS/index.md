@@ -1,4 +1,4 @@
-<strong>1.What is CSS selector specificity and how does it work?</strong>
+<strong>1. What is CSS selector specificity and how does it work?</strong>
 
 CSS selector specificity is a measure of how specific a CSS selector is, and it determines which styles should be applied to an element when there are conflicting styles specified for the same element.
 
@@ -47,3 +47,15 @@ p {
 In this example, the inline style on the first div element takes precedence over the ID selector, which takes precedence over the class selector, which takes precedence over the element selector.
 
 It's important to understand selector specificity when working with CSS, as it can help you avoid unintended style conflicts and make sure that your styles are applied consistently across your website or application. However, it's also important to use selector specificity judiciously and avoid over-specific selectors, as they can make your code harder to maintain and lead to style conflicts.
+
+<strong>2. What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?</strong>
+
+"Resetting" and "normalizing" are two approaches to dealing with the default styles and inconsistencies of CSS across different web browsers.
+
+"Resetting" involves removing all the default styles applied by the browser to HTML elements and setting all the properties to a common baseline. This can be achieved by using a CSS file that sets all properties to their initial value or by using a specialized CSS framework such as Eric Meyer's "CSS Reset".
+
+"Normalizing" involves preserving some of the default styles of HTML elements while making sure that they are consistent across different browsers. This can be achieved by using a CSS file that applies styles to HTML elements to ensure that they are displayed consistently across different browsers. Some popular CSS frameworks that use the "normalize" approach include Normalize.css and Modern Normalize.
+
+Which approach to choose depends on the specific needs of the project. Resetting can provide a blank slate for developers to work with and can ensure that the final styles of the website are consistent across different browsers. However, resetting can also lead to a lot of additional work for developers as they have to manually style every HTML element from scratch. Normalizing can save time and effort by providing a consistent base style for all HTML elements, but it may also result in some deviations from the default styles of certain elements.
+
+Ultimately, both approaches have their pros and cons, and the choice between them depends on the specific needs and constraints of the project.

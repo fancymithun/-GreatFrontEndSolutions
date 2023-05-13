@@ -1,4 +1,4 @@
-<strong>1.Explain event delegation</strong>
+<strong>1. Explain event delegation</strong>
 
 Event delegation is a technique involving adding event listeners to a parent element instead of adding them to the descendant elements. The listener will fire whenever the event is triggered on the descendant elements due to event bubbling up the DOM. The benefits of this technique are:
 
@@ -27,7 +27,7 @@ document.getElementById("parent-list").addEventListener("click", function(e) {
 });
 ```
 
-<strong>2.Explain how this works in JavaScript</strong>
+<strong>2. Explain how this works in JavaScript</strong>
 
 
 In JavaScript, this is a special keyword that refers to the object that the current function or method is a property of. The value of this changes depending on how the function or method is called, and it can be determined in different ways.
