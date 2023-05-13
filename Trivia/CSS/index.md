@@ -1,4 +1,4 @@
-1.What is CSS selector specificity and how does it work?
+<strong>1.What is CSS selector specificity and how does it work?</strong>
 
 CSS selector specificity is a measure of how specific a CSS selector is, and it determines which styles should be applied to an element when there are conflicting styles specified for the same element.
 

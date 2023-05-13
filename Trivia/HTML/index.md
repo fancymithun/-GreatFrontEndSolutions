@@ -1,4 +1,4 @@
-1.What does a DOCTYPE do?
+<strong>1.What does a DOCTYPE do?</strong>
 
 The <!DOCTYPE> declaration is an HTML (Hypertext Markup Language) tag that specifies the version of HTML or XML that a web page is written in. The purpose of the <!DOCTYPE> declaration is to tell the web browser how to interpret and render the web page, based on the rules and specifications of the chosen document type.
 
@@ -13,7 +13,7 @@ In addition to specifying the HTML version, the <!DOCTYPE> declaration can also 
 
 Including a complete and correct <!DOCTYPE> declaration at the beginning of your HTML documents is important for ensuring that your web pages are displayed consistently across different browsers and devices. This can help avoid layout and display issues, as well as ensure that your web pages comply with web standards and best practices.
 
-2.How do you serve a page with content in multiple languages?
+<strong>2.How do you serve a page with content in multiple languages?</strong>
 
 To serve a page with content in multiple languages, you can use a technique called internationalization (i18n). Here are some common approaches to implement i18n:
 
@@ -33,7 +33,7 @@ Use translation plugins: If you are using a content management system like WordP
 
 Once you have translated your content, you can use JavaScript or server-side rendering to dynamically serve the content in the appropriate language based on the user's preferences. You can also use HTML tags to indicate the language of your content to search engines and other automated tools.
 
-3.Consider HTML5 as an open web platform. What are the building blocks of HTML5?
+<strong>3.Consider HTML5 as an open web platform. What are the building blocks of HTML5?</strong>
 
 HTML5 is a markup language used for structuring and presenting content on the web. It is designed to be an open web platform, with a range of features that make it more powerful and flexible than its predecessors. The building blocks of HTML5 include:
 
