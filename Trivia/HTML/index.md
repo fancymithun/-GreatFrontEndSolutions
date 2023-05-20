@@ -95,3 +95,35 @@ Useful-to-have - include the locale in the path (e.g en_US, zh_CN, etc
 
 `<script defer>` - The script will be fetched in parallel to HTML parsing and executed when the page has finished parsing. If there are multiple of them, each deferred script is executed in the order they were encountered in the document. If a script relies on a fully-parsed DOM, the defer attribute will be useful in ensuring that the HTML is fully parsed before executing. A deferred script must not contain document.write.
 Note: The async and defer attributes are ignored for scripts that have no src attribute.
+
+<strong>7 .What are data- attributes good for?</strong>
+
+Before JavaScript frameworks became popular, front end developers used data- attributes to store extra data within the DOM itself, without other hacks such as non-standard attributes, extra properties on the DOM. It is intended to store custom data private to the page or application, for which there are no more appropriate attributes or elements.
+
+These days, using data- attributes is generally not encouraged. One reason is that users can modify the data attribute easily by using inspect element in the browser. The data model is better stored within JavaScript itself and stay updated with the DOM via data binding possibly through a library or a framework.
+
+However, one perfectly valid use of data attributes, is to add a hook for end to end testing frameworks such as Selenium and Capybara without having to create a meaningless classes or ID attributes. The element needs a way to be found by a particular Selenium spec and something like data-selector='the-thing' is a valid way to do so without convoluting the semantic markup otherwise.
+
+<strong>8 .What is the use case between data-atrributes and class?</strong>
+
+a. Purpose:
+
+Data Attributes: Data attributes (data-*) are primarily used to store custom data or metadata within HTML elements. They are designed to associate additional information with elements without affecting their visual presentation or behavior.
+Class/ID: Classes and IDs are used to target and select elements for styling or DOM manipulation. They help define the style or behavior of elements or serve as unique identifiers for specific elements.
+
+b. Selectivity:
+
+Data Attributes: Data attributes are not specifically designed for element selection. While you can use data attributes to target elements for manipulation, it generally requires more complex and specific selectors, such as [data-attribute-name].
+Class/ID: Classes and IDs are explicitly intended for selecting elements. Classes can be applied to multiple elements, allowing for grouped selection, while IDs must be unique within the document and provide a straightforward way to target a single element.
+
+c. Code Organization and Semantics:
+
+Data Attributes: Data attributes enhance code organization by allowing you to attach additional data to elements, making it more semantic and self-descriptive. They provide a way to associate meaningful information with elements, enhancing the understanding of the HTML structure.
+Class/ID: Classes and IDs primarily focus on styling and element identification. While they can be used to convey meaning through naming conventions, their primary purpose is not to describe the element's purpose or additional data.
+
+d. JavaScript Integration:
+
+Data Attributes: Data attributes offer a convenient way to access and manipulate data within JavaScript. You can use methods like getAttribute() or the dataset property to retrieve or modify the custom data associated with an element.
+Class/ID: Classes and IDs are commonly used for element selection in JavaScript. You can select elements by class or ID using methods like querySelector() or getElementById() and manipulate their properties, styles, or content.
+
+In summary, data attributes provide a means to attach custom data to elements, improving code organization and semantics, while classes and IDs are primarily used for selecting elements and defining styling or behavior. The choice between using data attributes and classes/IDs depends on the specific purpose and requirements of your application or project.
