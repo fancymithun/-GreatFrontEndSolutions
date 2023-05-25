@@ -205,3 +205,53 @@ const {e, f, ...others} = {
   h: 4,
 }; // e: 1, f: 2, others: { g: 3, h: 4 }
 ```
+
+<strong>9. How can you share code between files?</strong>
+
+This depends on the JavaScript environment.
+
+Global variables
+
+One way is to use global variables. This is the simplest way to share code between files, but it's also the least safe. Global variables can be accessed from any file, which can lead to conflicts and errors.
+
+Exporting functions
+
+Another way to share code between files is to export functions. This is a more secure way to share code, because it limits access to the function to the files that import it. To export a function, you use the export keyword. For example:
+
+```
+// file1.js
+function add(a, b) {
+  return a + b;
+}
+
+export { add };
+```
+To import the function, you use the import keyword. For example:
+
+```
+// file2.js
+import { add } from './file1';
+
+const sum = add(1, 2);
+console.log(sum); // 3
+```
+Modules
+
+The most modern way to share code between files is to use modules. Modules are a way to organize your code into self-contained units. They're also the most secure way to share code, because they isolate each module from the others. To create a module, you use the export default keyword. For example:
+
+```
+// file1.js
+export default function add(a, b) {
+  return a + b;
+}
+```
+
+To import the module, you use the import keyword. For example:
+
+```
+// file2.js
+import add from './file1';
+
+const sum = add(1, 2);
+console.log(sum); // 3
+```
