@@ -96,3 +96,29 @@ console.log(a == undefined); // true
 <strong>4. Explain the same-origin policy with regards to JavaScript.</strong>
 
 In computing, the same-origin policy (SOP) is an important concept in the web application security model. Under the policy, a web browser permits scripts contained in a first web page to access data in a second web page, but only if both web pages have the same origin. An origin is defined as a combination of URI scheme, host name, and port number. This policy prevents a malicious script on one page from obtaining access to sensitive data on another web page through that page's Document Object Model.
+
+<strong>5. What is "use strict";? What are the advantages and disadvantages to using it?</strong>
+
+When strict mode is enabled, the code is executed in a different manner compared to normal mode. Here are some key differences between strict mode and normal mode:
+
+Implicit Global Variables: In strict mode, variables must be explicitly declared with "var," "let," or "const." Otherwise, assigning a value to an undeclared variable will result in an error. In normal mode, assigning a value to an undeclared variable implicitly creates a global variable.
+
+Assigning Values to Read-Only Global Variables: In strict mode, assigning a value to a read-only global variable, such as "undefined," "NaN," or "Infinity," will throw an error. In normal mode, such assignments do not result in an error.
+
+Deleting Variables, Functions, or Function Arguments: Deleting variables, functions, or function arguments is not allowed in strict mode and will throw an error. In normal mode, deleting these entities is permitted, although it is generally not recommended.
+
+Duplicate Parameters: Defining multiple parameters with the same name in a function declaration or function expression will cause an error in strict mode. In normal mode, duplicate parameters are allowed, and the later ones simply override the earlier ones.
+
+Octal Numeric Literals: Octal numeric literals (numbers starting with a leading zero) are not allowed in strict mode. In normal mode, octal literals are interpreted as decimal values.
+
+These are just a few examples of the differences between strict mode and normal mode. Strict mode helps catch common coding mistakes and promotes safer and more maintainable JavaScript code. It's generally recommended to use strict mode to avoid potential pitfalls and benefit from better error handling in your JavaScript projects.
+
+```
+"use strict";
+
+function myFunction() {
+  x = 10; // This will cause an error in strict mode
+  return x;
+}
+console.log(myFunction());
+```
