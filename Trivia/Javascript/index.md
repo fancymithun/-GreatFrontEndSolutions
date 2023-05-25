@@ -72,3 +72,23 @@ function Person(name) {
 const person = new Person('John'); // creates a new Person object using the constructor
 
 ```
+
+<strong>3. What is the difference between == and ===?</strong>
+
+== is the abstract equality operator while === is the strict equality operator. The == operator will compare for equality after doing any necessary type conversions. The === operator will not do type conversion, so if two values are not the same type === will simply return false. When using ==, funky things can happen, such as:
+
+```
+1 == '1'; // true
+1 == [1]; // true
+1 == true; // true
+0 == ''; // true
+0 == '0'; // true
+0 == false; // true
+```
+My advice is never to use the == operator, except for convenience when comparing against null or undefined, where a == null will return true if a is null or undefined.
+	
+```
+var a = null;
+console.log(a == null); // true
+console.log(a == undefined); // true
+```
