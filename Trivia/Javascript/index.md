@@ -86,9 +86,13 @@ const person = new Person('John'); // creates a new Person object using the cons
 0 == false; // true
 ```
 My advice is never to use the == operator, except for convenience when comparing against null or undefined, where a == null will return true if a is null or undefined.
-	
+
 ```
 var a = null;
 console.log(a == null); // true
 console.log(a == undefined); // true
 ```
+
+<strong>4. Explain the same-origin policy with regards to JavaScript.</strong>
+
+In computing, the same-origin policy (SOP) is an important concept in the web application security model. Under the policy, a web browser permits scripts contained in a first web page to access data in a second web page, but only if both web pages have the same origin. An origin is defined as a combination of URI scheme, host name, and port number. This policy prevents a malicious script on one page from obtaining access to sensitive data on another web page through that page's Document Object Model.
