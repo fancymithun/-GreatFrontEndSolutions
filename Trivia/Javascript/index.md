@@ -255,3 +255,17 @@ import add from './file1';
 const sum = add(1, 2);
 console.log(sum); // 3
 ```
+
+<strong>10. What tools and techniques do you use for debugging JavaScript code?</strong>
+
+a.React and Redux
+  React Devtools
+  Redux Devtools
+
+b.Vue
+  Vue Devtools
+
+c.JavaScript
+  Chrome Devtools
+  debugger statement
+  Good old console.log debugging  
