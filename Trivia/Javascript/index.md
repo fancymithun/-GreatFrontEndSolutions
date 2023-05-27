@@ -258,14 +258,64 @@ console.log(sum); // 3
 
 <strong>10. What tools and techniques do you use for debugging JavaScript code?</strong>
 
-a.React and Redux
+a. React and Redux
+
   React Devtools
+
   Redux Devtools
 
-b.Vue
+b. Vue
+
   Vue Devtools
 
-c.JavaScript
+c. JavaScript
+
   Chrome Devtools
+
   debugger statement
-  Good old console.log debugging  
+
+  Good old console.log 
+  
+  debugging  
+
+  <strong>11. Can you describe the main difference between a .forEach loop and a .map() loop and why you would pick one versus the other?</strong>
+
+forEach Loop:
+
+"forEach" is a method available in many programming languages, including JavaScript.
+It iterates over each element of an array and executes a provided function for each element.
+It does not return a new array.
+It is primarily used for executing a function on each element of an array without transforming or modifying the original array.
+It is suitable when you want to perform an action or side effect for each element, such as logging values, updating the DOM, or making API calls, but you don't need a new array as the result.
+
+Example of .forEach:
+
+```
+const numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach((num, index, arr) => {
+  // Perform desired modifications on each element
+  arr[index] = num * 2;
+});
+
+console.log(numbers); // Output: [2, 4, 6, 8, 10]
+```
+
+map() Loop:
+
+map() is a method available in many programming languages, including JavaScript.
+It iterates over each element of an array and executes a provided function for each element.
+It returns a new array with the results of applying the function to each element.
+It is primarily used for transforming or mapping each element of an array into a new value or structure.
+It is suitable when you want to perform a transformation on each element of the array and collect the transformed values in a new array.
+
+```
+const numbers = [1, 2, 3, 4, 5];
+
+const squaredNumbers = numbers.map((num) => {
+  return num * num;
+});
+
+console.log(squaredNumbers); // Output: [1, 4, 9, 16, 25]
+```
+
