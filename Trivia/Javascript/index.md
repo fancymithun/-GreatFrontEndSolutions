@@ -318,4 +318,51 @@ const squaredNumbers = numbers.map((num) => {
 
 console.log(squaredNumbers); // Output: [1, 4, 9, 16, 25]
 ```
+<strong>12. What's a typical use case for anonymous functions?</strong>
 
+Anonymous functions, also known as lambda functions or function literals, are functions that are defined without a specific name. They are typically used in scenarios where a small, one-time function is needed and it doesn't require a dedicated named function.
+
+Callback functions: Anonymous functions are commonly used as callback functions, which are functions passed as arguments to other functions. This is often seen in asynchronous operations, event handlers, or higher-order functions. Using anonymous functions as callbacks allows for concise and inline function definitions without the need for a separate named function.
+
+```
+const numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach(function(num) {
+  console.log(num);
+});
+```
+
+Function parameters: Anonymous functions can be passed directly as parameters to functions, allowing for flexible and on-the-fly function definitions. This is useful when you need a function with specific behavior to be used in a specific context without cluttering the code with a separate named function.
+
+```
+const result = calculate(5, function(num) {
+  return num * 2;
+});
+
+function calculate(value, operation) {
+  return operation(value);
+}
+```
+
+Immediately Invoked Function Expressions (IIFE): Anonymous functions can be immediately invoked at the point of definition to create a self-contained scope. This helps avoid polluting the global namespace and allows for encapsulation of variables and logic.
+
+```
+(function() {
+  // Code within the anonymous function
+  const message = "Hello, world!";
+  console.log(message);
+})();
+```
+
+Higher-order functions: Higher-order functions are functions that operate on other functions, taking them as arguments or returning them as results. Anonymous functions are often used in higher-order functions to define behavior dynamically.
+
+```
+function multiplier(factor) {
+  return function(number) {
+    return number * factor;
+  }
+}
+
+const double = multiplier(2);
+console.log(double(5)); // Output: 10
+```
