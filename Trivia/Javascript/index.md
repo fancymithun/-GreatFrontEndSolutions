@@ -390,3 +390,60 @@ c. Some webcrawlers do not execute JavaScript and would not see content that has
 d. Webpages using Ajax to fetch data will likely have to combine the fetched remote data with client-side templates to update the DOM. For this to happen, JavaScript will have to be parsed and executed on the browser, and low-end mobile devices might struggle with this.
 
 e. Basically most of the disadvantages of an SPA.
+
+<strong>14. Why you might want to create static class members?</strong>
+
+Creating static class members in JavaScript can be useful in several scenarios:
+
+Constants: Static class members can be used to define constants that are shared among all instances of a class. For example, if you have a Math utility class, you can define a static property Math.PI to represent the mathematical constant pi (π). Since it's a constant value, it makes sense for all instances to share the same value.
+
+Utility Methods: Static class methods can be used to create utility functions that are not specific to any instance but are related to the class as a whole. These methods can perform operations or calculations that are independent of any particular instance. For example, in a String manipulation class, you might have a static method StringUtility.capitalize() that capitalizes the first letter of a given string.
+
+In JavaScript, there is no concept of a static class member like in some other programming languages. However, you can achieve similar functionality using a combination of constructor functions, prototype properties, and closures.
+
+<strong>15. ES6 Template Literals offer a lot of flexibility in generating strings, can you give an example?</strong>
+
+Template literals help make it simple to do string interpolation, or to include variables in a string. Before ES2015, it was common to do something like this:
+
+```
+var person = {name: 'Tyler', age: 28};
+console.log(
+  'Hi, my name is ' + person.name + ' and I am ' + person.age + ' years old!',
+);
+// 'Hi, my name is Tyler and I am 28 years old!'
+```
+
+With template literals, you can now create that same output like this instead:
+
+```
+const person = {name: 'Tyler', age: 28};
+console.log(`Hi, my name is ${person.name} and I am ${person.age} years old!`);
+// 'Hi, my name is Tyler and I am 28 years old!'
+```
+
+A second helpful use case is in creating multi-line strings. Before ES2015, you could create a multi-line string like this:
+
+```
+console.log('This is line one.\nThis is line two.');
+// This is line one.
+// This is line two.
+```
+
+Or if you wanted to break it up into multiple lines in your code so you didn't have to scroll to the right in your text editor to read a long string, you could also write it like this:
+
+```
+console.log(`This is line one.
+This is line two.`);
+```
+
+Another use case of template literals would be to use as a substitute for templating libraries for simple variable interpolations:
+
+```
+const person = {name: 'Tyler', age: 28};
+document.body.innerHTML = `
+  <div>
+    <p>Name: ${person.name}</p>
+    <p>Age: ${person.age}</p>
+  </div>
+`;
+```
