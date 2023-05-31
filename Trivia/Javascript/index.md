@@ -481,3 +481,34 @@ const transformNamesToUppercase = function (names) {
 };
 transformNamesToUppercase(names); // ['IRISH', 'DAISY', 'ANNA']
 ```
+
+<strong>17. Can you offer a use case for the new arrow => function syntax? How does this new syntax differ from other functions?</strong>
+
+The arrow function syntax is more concise and easier to read. However, there are some cases where the regular function syntax is necessary. For example, if you need to access the this keyword, you must use a regular function.
+
+```
+// This is a regular function
+function regularFunction(x) {
+  return x * x;
+}
+
+// This is an arrow function
+const arrowFunction = x => x * x;
+```
+
+And also "this" keyword shows global object in regular function and empty object in arrow function.
+
+```
+const arrowFn = () => {
+    console.log(this)
+}
+
+arrowFn(); // {}
+
+
+function regularFn(){
+    console.log(this);
+}
+
+regularFn() // Object [global] { }
+```
