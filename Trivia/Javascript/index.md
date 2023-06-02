@@ -574,3 +574,34 @@ var person = new Person('John');
 console.log(person); // Person { name: "John" }
 console.log(person.name); // "john"
 ```
+
+<strong>20. Explain Ajax in as much detail as possible</strong>
+
+Ajax (asynchronous JavaScript and XML) is a set of web development techniques using many web technologies on the client side to create asynchronous web applications. With Ajax, web applications can send data to and retrieve from a server asynchronously (in the background) without interfering with the display and behavior of the existing page. By decoupling the data interchange layer from the presentation layer, Ajax allows for web pages, and by extension web applications, to change content dynamically without the need to reload the entire page. In practice, modern implementations commonly use JSON instead of XML, due to the advantages of JSON being native to JavaScript.
+
+The XMLHttpRequest API is frequently used for the asynchronous communication or these days, the fetch API.
+
+```
+// This is the client-side script.
+
+// Initialize the HTTP request.
+let xhr = new XMLHttpRequest();
+// define the request
+xhr.open('GET', 'send-ajax-data.php');
+
+// Track the state changes of the request.
+xhr.onreadystatechange = function () {
+	const DONE = 4; // readyState 4 means the request is done.
+	const OK = 200; // status 200 is a successful return.
+	if (xhr.readyState === DONE) {
+		if (xhr.status === OK) {
+			console.log(xhr.responseText); // 'This is the output.'
+		} else {
+			console.log('Error: ' + xhr.status); // An error occurred during the request.
+		}
+	}
+};
+
+// Send the request to send-ajax-data.php
+xhr.send(null);
+```
