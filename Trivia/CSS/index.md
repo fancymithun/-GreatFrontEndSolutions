@@ -59,3 +59,6 @@ It's important to understand selector specificity when working with CSS, as it c
 Which approach to choose depends on the specific needs of the project. Resetting can provide a blank slate for developers to work with and can ensure that the final styles of the website are consistent across different browsers. However, resetting can also lead to a lot of additional work for developers as they have to manually style every HTML element from scratch. Normalizing can save time and effort by providing a consistent base style for all HTML elements, but it may also result in some deviations from the default styles of certain elements.
 
 Ultimately, both approaches have their pros and cons, and the choice between them depends on the specific needs and constraints of the project.
+
+<strong>3. Describe floats and how they work.</strong>
+
